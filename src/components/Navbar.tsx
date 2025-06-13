@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-black">
-      <div className='max-w-7xl mx-[100px] px-4 sm:px-6 lg:px-0'>
+      <div className='max-w-7xl mx-[100px] sm:px-6'>
         <div className='flex items-center justify-between py-6 md:py-9'>
           <div className='flex-shrink-0'>
             <Link to="/">
@@ -124,7 +124,7 @@ const Navbar = () => {
             Contact
           </NavLink>
           <div className='pt-4'>
-            <button className='w-full text-white px-4 py-2 rounded-full border border-white hover:bg-white hover:text-black transition-colors duration-200'>
+            <button className='w-full text-white px-4 py-2 rounded-full border border-white hover:bg-white hover:text-black transition-colors duration-200 cursor-pointer'>
               HIRE ME
             </button>
           </div>
