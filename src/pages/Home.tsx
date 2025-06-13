@@ -221,7 +221,7 @@ const ExpertiseSection: React.FC = () => {
             <Headings title="Blog" />
             <a href="#" className="underline hover:no-underline text-sm sm:text-base">view all</a>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8">
             {blogs.map((blog) => (
               <BlogPost key={blog.title} {...blog} />
             ))}
