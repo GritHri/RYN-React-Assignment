@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import Logo from '../assets/Logo.svg';
 
+const BASE_URL = '/RYN-React-Assignment';
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -14,7 +16,7 @@ const Navbar = () => {
       <div className='max-w-7xl mx-[100px] sm:px-6'>
         <div className='flex items-center justify-between py-6 md:py-9'>
           <div className='flex-shrink-0'>
-            <Link to="/">
+            <Link to={`${BASE_URL}/`}>
               <img src={Logo} alt="Logo" className='h-8 w-auto' />
             </Link>
           </div>
@@ -38,12 +40,13 @@ const Navbar = () => {
               )}
             </button>
           </div>
-          
+
           <div className='hidden md:flex md:items-center md:justify-center md:flex-1'>
             <ul className='flex space-x-4'>
               <li>
                 <NavLink 
-                  to="/" 
+                  to={`${BASE_URL}/`} 
+                  end
                   className={({ isActive }) => 
                     `px-4 py-2 rounded-full transition-colors duration-200 ${
                       isActive ? 'bg-white text-black' : 'text-white hover:bg-gray-800'
@@ -51,11 +54,11 @@ const Navbar = () => {
                   }
                 >
                   Home
-                </NavLink>
+              </NavLink>
               </li>
               <li>
                 <NavLink 
-                  to="/about" 
+                  to={`${BASE_URL}/about`} 
                   className={({ isActive }) => 
                     `px-4 py-2 rounded-full transition-colors duration-200 ${
                       isActive ? 'bg-white text-black' : 'text-white hover:bg-gray-800'
@@ -67,7 +70,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink 
-                  to="/contact" 
+                  to={`${BASE_URL}/contact`} 
                   className={({ isActive }) => 
                     `px-4 py-2 rounded-full transition-colors duration-200 ${
                       isActive ? 'bg-white text-black' : 'text-white hover:bg-gray-800'
@@ -79,7 +82,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          
+
           <div className='hidden md:flex items-center justify-end flex-shrink-0'>
             <button className='text-white px-4 py-2 rounded-full border border-white hover:bg-white hover:text-black transition-colors duration-200'>
               HIRE ME
@@ -91,7 +94,8 @@ const Navbar = () => {
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`} id='mobile-menu'>
         <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
           <NavLink
-            to="/"
+            to={`${BASE_URL}/`}
+            end
             className={({ isActive }) =>
               `block px-3 py-2 rounded-md text-base font-medium ${
                 isActive ? 'bg-white text-black' : 'text-white hover:bg-gray-800'
@@ -101,8 +105,9 @@ const Navbar = () => {
           >
             Home
           </NavLink>
+
           <NavLink
-            to="/about"
+            to={`${BASE_URL}/about`}
             className={({ isActive }) =>
               `block px-3 py-2 rounded-md text-base font-medium ${
                 isActive ? 'bg-white text-black' : 'text-white hover:bg-gray-800'
@@ -113,7 +118,7 @@ const Navbar = () => {
             About
           </NavLink>
           <NavLink
-            to="/contact"
+            to={`${BASE_URL}/contact`}
             className={({ isActive }) =>
               `block px-3 py-2 rounded-md text-base font-medium ${
                 isActive ? 'bg-white text-black' : 'text-white hover:bg-gray-800'

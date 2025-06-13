@@ -8,20 +8,21 @@ import Footer from "./components/Footer"
 
 function App() {
 
+  const BASE_URL = '/RYN-React-Assignment';
   
   return (
     <BrowserRouter>
       <Navbar />
       <div className="md:mx-25 mx-2">
         <Routes>
-          <Route path="/" element={
+          <Route path={BASE_URL + "/"} element={
             <>
               <Home />
               <ReviewsSection />
             </>
           } />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path={BASE_URL + "/about"} element={<About />} />
+          <Route path={BASE_URL + "/contact"} element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
