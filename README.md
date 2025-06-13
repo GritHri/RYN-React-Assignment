@@ -29,3 +29,7 @@ Project for React Assignment
     - tsconfig.json
     - tsconfig.node.json
     - vite.config.ts
+
+## Deployment
+
+Deployed at https://grithri.github.io/RYN-React-Assignment/
